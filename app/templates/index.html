@@ -17,7 +17,8 @@
 				<div id="square" style="height: {{ j[0] * 5}}; width: {{ j[1] * 5}}; left: {{ j[2] * 5}}; top: {{ j[3] * 5}}; border: none; background-color: grey"></div>
 			{% endfor %}
 		</div>
-		<button onclick="connect('abc')">Connect to abc!</button>
-		<button onclick="connect('def')">Connect to def!</button>
+		{% for room in sessionRooms %}
+			<button onclick="connect('{{ room }}')">Connect to {{ room }}!</button>
+		{% endfor %}
 	</body>
 </html>
