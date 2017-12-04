@@ -1,0 +1,23 @@
+<html>
+	<head>
+    	<title>Dungeon Generator</title>
+    	<link rel="stylesheet" type="text/css" href="/static/style.css">
+    	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js">
+    	</script>
+		<script type="text/javascript" charset="utf-8" src="static/socket.js">
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			{% for i in roomCoords %}
+				<div id="square" style="height: {{ i[0] * 5}}; width: {{ i[1] * 5}}; left: {{ i[2] * 5}}; top: {{ i[3] * 5}}"></div>
+			{% endfor %}
+
+			{% for j in hollowedRooms %}
+				<div id="square" style="height: {{ j[0] * 5}}; width: {{ j[1] * 5}}; left: {{ j[2] * 5}}; top: {{ j[3] * 5}}; border: none; background-color: grey"></div>
+			{% endfor %}
+		</div>
+		<button onclick="connect('abc')">Connect to abc!</button>
+		<button onclick="connect('def')">Connect to def!</button>
+	</body>
+</html>

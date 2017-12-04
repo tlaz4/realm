@@ -1,0 +1,17 @@
+#container {
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 0;
+    position: relative;
+}
+
+#square{
+	border: solid black 1px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: absolute;
+}
